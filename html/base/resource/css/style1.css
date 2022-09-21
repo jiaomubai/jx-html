@@ -1,0 +1,12 @@
+/* 设置 body 部分的样式 */
+body {
+    background-color:rgb(242, 242, 156);
+}
+/* 设置段落 p 的样式 */
+p {
+    color:rgb(220, 72, 72);
+    background-color: aqua;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+}
