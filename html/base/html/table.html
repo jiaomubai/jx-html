@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 表格示例</title>
+    <!-- html 引入外部样式 -->
+    <link rel="stylesheet" type="text/css" href="../resource/css/tableStyle.css">
+</head>
+<body>
+
+    <h3>无边框(border = 0)的表格</h3>
+    <table border="0">
+        <tr>
+            <td></td>
+            <td>张三</td>
+            <td>李四</td>
+        </tr>
+        <tr>
+            <td>语文</td>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>85</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>英语</td>
+            <td>90</td>
+            <td>90</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h3>边框为1(border = 1)的表格</h3>
+    <table border="1">
+        <tr>
+            <td></td>
+            <td>张三</td>
+            <td>李四</td>
+        </tr>
+        <tr>
+            <td>语文</td>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>85</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>英语</td>
+            <td>90</td>
+            <td>90</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h3>边框为10(border = 10)的表格</h3>
+    <table border="10">
+        <tr>
+            <td></td>
+            <td>张三</td>
+            <td>李四</td>
+        </tr>
+        <tr>
+            <td>语文</td>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>85</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>英语</td>
+            <td>90</td>
+            <td>90</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h3>带有标题和表头的表格</h3>
+    <table border="2">
+        <caption>学生语数外成绩表</caption>
+        <tr>
+            <th></th>
+            <th>张三</th>
+            <th>李四</th>
+        </tr>
+        <tr>
+            <th>语文</th>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <th>数学</th>
+            <td>85</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <th>英语</th>
+            <td>90</td>
+            <td>90</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h3>单元格合并</h3>
+    <table border="2">
+        <tr>
+            <td>第一行第一列</td>
+            <td colspan="2">合并列</td>
+        </tr>
+        <tr>
+            <td>第二行第一列</td>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td rowspan="2">合并行</td>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>第五行第一列</td>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h3>表格内标签</h3>
+    <table border="2">
+        <tr>
+          <td>
+           <p>这是一个段落</p>
+           <p>这是另一个段落</p>
+          </td>
+          <td>这个单元格包含一个表格:
+           <table border="1">
+           <tr>
+             <td>A</td>
+             <td>B</td>
+           </tr>
+           <tr>
+             <td>C</td>
+             <td>D</td>
+           </tr>
+           </table>
+          </td>
+        </tr>
+        <tr>
+          <td>这个单元格包含一个列表
+           <ul>
+            <li>apples</li>
+            <li>bananas</li>
+            <li>pineapples</li>
+           </ul>
+          </td>
+          <td>HELLO</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h3>设置单元格间距与边距</h3>
+    <table border="2" cellpadding="10" cellspacing="10">
+        <tr>
+            <td></td>
+            <td>张三</td>
+            <td>李四</td>
+        </tr>
+        <tr>
+            <td>语文</td>
+            <td>80</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>85</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>英语</td>
+            <td>90</td>
+            <td>90</td>
+        </tr>
+    </table>
+    <hr />
+
+
+    <h2>HTML 表格综合实践</h2>
+    <!-- 以表格的形式实现标题等, 设置表格居中
+        该表格有两行一列, 第一行为标题, 第二行为一个时间戳标记
+     -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <!-- 设置标题居中, 高度为 60, 以及使用 css 样式中 class 为 biaoti 的样式 -->
+            <td align="center" class="biaoti" height="60">受理员业务统计表</td>
+        </tr>
+        <tr>
+            <td align="right" height="25">2022-09-22</td>
+        </tr>
+    </table>
+    <!-- 新的表格, 承接上一个表格, 设置表格居中、单元格间距为 1、单元格边距为 4、单元格背景色以及使用的样式
+        上一个表格为该表格设置了标题
+     -->
+    <table width="100%" border="0" cellspacing="1" cellpadding="4" bgcolor="#cccccc" class="tabtop13" align="center">
+        <!-- 第1行开始, 合并之后共有7列, 合并之前共有12列 -->
+        <tr>
+            <!-- 第1列为受理员列, 为合并行, 合并了2行2列, 使用了3个样式 -->
+            <td colspan="2" class="btbg font-center titfont" rowspan="2">受理员</td>
+            <!-- 第2列为受理数列, 合并了2行, 使用了3个样式, 列宽占表格总宽度的10% -->
+            <td width="10%" class="btbg font-center titfont" rowspan="2">受理数</td>
+            <!-- 第3列为自办数列, 合并了2行, 使用了3个样式, 列宽占表格总宽度的10% -->
+            <td width="10%" class="btbg font-center titfont" rowspan="2">自办数</td>
+            <!-- 第4列为直接解答数列, 合并了2行, 使用了3个样式, 列宽占表格总宽度的10% -->
+            <td width="10%" class="btbg font-center titfont" rowspan="2">直接解答</td>
+            <!-- 第5列为拟办意见列, 合并了2列(即第2行的第5列(同意)和第6列(比例)), 使用了3个样式 -->
+            <td colspan="2" class="btbg font-center titfont">拟办意见</td>
+            <!-- 第6列为返回修改列, 合并了2列, 使用了3个样式 -->
+            <td colspan="2" class="btbg font-center titfont">返回修改</td>
+            <!-- 第7列为工单类型列, 合并了3列, 使用了3个样式 -->
+            <td colspan="3" class="btbg font-center titfont">工单类型</td>
+        </tr>
+        <!-- 第1行结束 -->
+
+        <!-- 第2行开始, 为每列设置内容, 第2行与第1行为合并行 -->
+        <tr>
+            <!-- 从第5列开始赋值, 因为第1列、第2列、第3列和第4列已经在第一行赋过值了
+                使用了3个样式, 列宽占表格总宽度的8% -->
+            <td width="8%" class="btbg font-center">同意</td>
+            <!-- 第6列赋值, 第5列和第6列同属于第1行的第5列(拟办意见列)
+                使用了3个样式, 列宽占表格总宽度的8%
+                因为第5列和第6列属于第1行第5列(拟办意见列)的合并列, 所以第1行第5列(拟办意见)列宽占表格总宽度的16%
+             -->
+            <td width="8%" class="btbg font-center">比例</td>
+
+            <!-- 第7列和第8列赋值, 第7列为数量列, 第8列为比例列, 使用了3个样式, 列宽各占表格总宽度的8%
+                同属于第1行第6列(返回修改列)的合并列, 所以第1行第6列列宽占表格总宽度的16% -->
+            <td width="8%" class="btbg font-center">数量</td>
+            <td width="8%" class="btbg font-center">比例</td>
+
+            <!-- 第9列、第10列和第11列赋值, 第9列为建议件列, 第10列为诉求件列, 第11列为咨询件列, 
+                使用了3个样式, 列宽各占表格总宽度的8%
+                同属于第1行第7列(工单类型列)的合并列, 所以第1行第7列列宽占表格总宽度的24% -->
+            <td width="8%" class="btbg font-center">建议件</td>
+            <td width="8%" class="btbg font-center">诉求件</td>
+            <td width="8%" class="btbg font-center">咨询件</td>
+        </tr>
+        <!-- 第2行结束 -->
+
+        <!-- 第3行开始, 即受理组数据赋值开始 -->
+        <tr>
+            <!-- 第1列与第2列同属于第1行第1列的合并列(第1行第1列合并了2行2列), 所以表格第1行第1列列宽占表格总宽度的14% -->
+            <!-- 第1列为受理处列, 合并了5行, 使用了3个样式, 列宽占表格总宽度的7% -->
+            <td width="7%" rowspan="5" class="btbg1 font-center">受理处</td>
+            <!-- 第2列为张三列, 使用了1个样式, 列宽占表格总宽度的7% -->
+            <td width="7%" class="btbg2">张三</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+        </tr>
+        <!-- 第3行结束 -->
+
+        <!-- 第4行开始, 该行为第3行的合并行 -->
+        <tr>
+            <!-- 从第2列开始赋值, 第1列为受理处列, 在第3行已经赋值过
+                该列为李四列, 使用了1个样式 -->
+            <td class="btbg2">李四</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+        </tr>
+        <!-- 第4行结束 -->
+
+        <!-- 第5行开始, 该行为第3行的和并行 -->
+        <tr>
+            <!-- 从第2列开始赋值, 第1列为受理处列, 在第3行已经赋值过, 使用了1个样式 -->
+            <td class="btbg2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- 第5行结束 -->
+
+        <!-- 第6行开始, 该行为第3行的合并行 -->
+        <tr>
+            <!-- 从第2列开始赋值, 第1列为受理处列, 在第3行已经赋值过, 使用了1个样式 -->
+            <td class="btbg2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- 第6行结束 -->
+
+        <!-- 第7行开始, 该行为第3行的合并行 -->
+        <tr>
+            <!-- 从第2列(总计列)开始赋值, 第1列为受理处列, 在第3行已经赋值过, 使用了2个样式 -->
+            <td class="btbg2 font-center">总计</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+        </tr>
+        <!-- 第7行结束, 即受理组数据赋值结束 -->
+
+        <!-- 第8行开始, 即话务组数据赋值开始 -->
+        <tr>
+            <!-- 第1列与第2列同属于第1行第1列的合并列(第1行第1列合并了2行2列), 所以表格第1行第1列列宽占表格总宽度的14% -->
+            <!-- 第1列为话务组列, 合并了5行, 使用了3个样式, 列宽占表格总宽度的7% -->
+            <td width="7%" rowspan="5" class="btbg1 font-center">话务组</td>
+            <!-- 第2列为张三列, 使用了1个样式, 列宽占表格总宽度的7% -->
+            <td width="7%" class="btbg2">张三</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- 第8行结束 -->
+
+        <!-- 第9行开始, 该行为第8行的合并行 -->
+        <tr>
+            <!-- 从第2列开始赋值, 第1列为话务组列, 在第8行已经赋值过, 使用了1个样式 -->
+            <td class="btbg2">李四</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+        </tr>
+        <!-- 第9行结束 -->
+
+        <!-- 第10行开始, 该行为第8行的合并行 -->
+        <tr>
+            <!-- 从第2列开始赋值, 第1列为话务组列, 在第8行已经赋值过, 使用了1个样式 -->
+            <td class="btbg2">王五</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- 第10行结束 -->
+
+        <!-- 第11行开始, 该行为第8行的合并行 -->
+        <tr>
+            <!-- 从第2列开始赋值, 第1列为话务组列, 在第8行已经赋值过, 使用了1个样式 -->
+            <td class="btbg2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- 第11行结束 -->
+
+        <!-- 第12行开始, 该行为第8行的合并行 -->
+        <tr>
+            <!-- 从第2列开始赋值, 第1列为话务组列, 在第8行已经赋值过, 使用了2个样式 -->
+            <td class="btbg2 font-center">总计</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+            <td class="btbg2 font-center">20</td>
+        </tr>
+        <!-- 第12行结束, 即话务组数据赋值结束 -->
+      </table>
+
+</body>
+</html>
