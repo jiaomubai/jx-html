@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 拖放</title>
+
+    <style type="text/css">
+        #div1 {
+            width: 510px;
+            height: 310px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <p>拖动图片到矩形框中:</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img loading="lazy" id="drag1" src="../resource/picture/Chinese.jpg" draggable="true" ondragstart="drag(event)"
+        width="500" height="310">
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 拖放</title>
+
+    <style type="text/css">
+        #div1,
+        #div2 {
+            float: left;
+            width: 500px;
+            height: 310px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h4>在两个容器之间来回拖放元素：</h4>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="../resource/picture/Chinese.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="500"
+            height="310">
+    </div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+
+</html>
