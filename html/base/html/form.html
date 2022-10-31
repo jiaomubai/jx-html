@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 表单示例</title>
+</head>
+<body>
+
+    <h3>html 表单元素之文本域</h3>
+    <form>
+        文本域1：<input type="text" name="name1">
+        <br />
+        文本域2：<input type="text" name="name2">
+    </form>
+    <hr />
+
+    <h3>html 表单元素之密码字段</h3>
+    <form>
+        密码：<input type="password" name="password">
+    </form>
+    <hr />
+
+    <h3>html 表单元素之单选框</h3>
+    <form>
+        星期：<input type="radio" name="week" value="Sunday" checked="checked">星期日<br />
+        <input type="radio" name="week" value="Monday">星期一<br />
+        <input type="radio" name="week" value="Tuesday">星期二<br />
+        <input type="radio" name="week" value="Wednesday">星期三<br />
+        <input type="radio" name="week" value="Thursday">星期四<br />
+        <input type="radio" name="week" value="Friday">星期五<br />
+        <input type="radio" name="week" value="Saturday">星期六<br />
+    </form>
+    <hr />
+
+    <h3>html 表单元素之复选框</h3>
+    <form>
+        爱好：<input type="checkbox" name="hobbys" value="eat">吃<br />
+        <input type="checkbox" name="hobby" value="sleep">睡<br />
+        <input type="checkbox" name="hobby" value="cv">CV<br />
+        <input type="checkbox" name="hobby" value="bugging">bugging<br />
+        <input type="checkbox" name="hobby" value="debugging">debugging<br />
+    </form>
+    <hr />
+
+    <h3>html 表单元素之提交按钮</h3>
+    <form action="base.html">
+        确认：<input type="submit" name="tijiao" value="提交">
+    </form>
+    <hr />
+
+    <h3>html 表单元素之提交按钮与普通按钮</h3>
+    <form action="base.html">
+        提交：<input type="submit" name="tijiao"><br />
+        普通：<input type="button" name="putong">
+    </form>
+    <hr />
+
+    <h3>html 表单元素之下拉列表</h3>
+    <form action="base.html">
+        <select name="select">
+            <option value="eat">吃饭</option>
+            <option value="sleep">睡觉</option>
+            <option value="play" selected>打豆豆</option>
+        </select>
+    </form>
+    <hr />
+
+    <h3>html 表单之带边框的表单</h3>
+    <form action="base.html">
+        <fieldset>
+            <legend>带边框的表单</legend>
+            <select name="select">
+                <option value="eat">吃饭</option>
+                <option value="sleep">睡觉</option>
+                <option value="play" selected>打豆豆</option>
+            </select>
+        </fieldset>
+    </form>
+    <hr />
+
+</body>
+</html>

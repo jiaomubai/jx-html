@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 图像示例</title>
+</head>
+<body>
+    <p>
+        图片展示
+        <br />
+        <!-- 默认尺寸为图片原尺寸, 256 * 192 -->
+        <img src="../resource/picture/picture1.gif" alt="示例图片">
+    </p>
+    <hr />
+
+    <p>
+        设置图片的尺寸
+        <br />
+        <!-- 改变原有图片的尺寸, 修改为 150 * 150 -->
+        <img src="../resource/picture/picture1.gif" alt="示例图片" width="150" height="150">
+    </p>
+    <hr />
+
+    <p>
+        设置图片与文字的对齐方式为默认
+        <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50">
+        默认方式即向下对齐
+    </p>
+    <hr />
+
+    <p>
+        设置图片与文字的对齐方式为居中对齐
+        <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50" align="center">
+    </p>
+    <hr />
+
+    <p>
+        设置图片与文字的对齐方式为向上对齐
+        <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50" align="top">
+    </p>
+    <hr />
+
+    <p>
+        设置图片浮动在文字的左边
+        <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50" style="float:left;">
+    </p>
+    <hr />
+
+    <p>
+        设置图片浮动在文字的右边
+        <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50" style="float:right;">
+    </p>
+    <hr />
+
+    <p>
+        在图片上创建链接:
+        <a href="../resource/picture/picture1.gif" target="_blank">
+            <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50">
+        </a>
+    </p>
+    <hr />
+
+    <p>
+        创建图片圆形映射
+        <br />
+        <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50" usemap="#pictureMap">
+        <map name="pictureMap">
+            <area shape="circle" coords="25, 25, 10" alt="圆形映射" 
+            href="../resource/picture/picture1.gif" target="_blank">
+        </map>
+    </p>
+    <hr />
+
+    <p>
+        创建图片矩形映射
+        <br />
+        <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50" usemap="#pictureMap1">
+        <map name="pictureMap1">
+            <area shape="rect" coords="0, 0, 25, 25" alt="矩形映射" 
+            href="../resource/picture/picture1.gif" target="_blank">
+        </map>
+    </p>
+    <hr />
+
+    <p>
+        创建图片多边形映射
+        <br />
+        <img src="../resource/picture/picture1.gif" alt="示例图片"
+            width="50" height="50" usemap="#pictureMap2">
+        <map name="pictureMap2">
+            <area shape="poly" coords="0, 0, 0, 50, 50, 0" alt="多边形映射" 
+            href="../resource/picture/picture1.gif" target="_blank">
+        </map>
+    </p>
+    <hr />
+    
+</body>
+</html>

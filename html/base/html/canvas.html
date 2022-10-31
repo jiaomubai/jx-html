@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 画布示例</title>
+</head>
+
+<body>
+
+    <h3>创建画布1</h3>
+    <canvas id="canvas1" width="300px" height="200px" style="border: 10px solid purple; background-color: peru;">
+    </canvas>
+    <hr />
+
+    <h3>创建默认画布</h3>
+    <canvas id="canvas2"></canvas>
+    <hr />
+
+    <h3>创建画布3-使用 JavaScript 绘制图形</h3>
+    <canvas id="canvas3" width="300px" height="200px" style="border: 1px solid purple">
+    </canvas>
+    <script type="text/javascript">
+        function draw() {
+            // 找到 canvas 元素
+            var canvas = document.getElementById('canvas3');
+            if (!canvas.getContext) {
+                return;
+            }
+            // 创建 context 对象
+            var ctx = canvas.getContext("2d");
+            // 绘制一个矩形
+            ctx.fillStyle = "rgb(200,0,0)";
+            // 四个坐标点分别定义左上角起点 x 坐标、左上角起点 y 坐标、宽度(width)、高度(height)
+            ctx.fillRect(10, 10, 170, 120);
+            // 绘制另一个矩形
+            ctx.fillStyle = "rgba(0, 0, 200,0.5)";
+            ctx.fillRect(120, 70, 170, 120);
+        }
+        draw();
+    </script>
+    <hr />
+
+    <h3>绘制线段</h3>
+    <canvas id="canvas_line" width="300px" height="200px" style="border: 1px solid purple">
+    </canvas>
+    <script type="text/javascript">
+        function draw() {
+            // 获取 canvas 元素
+            var canvas = document.getElementById('canvas_line');
+            if (!canvas.getContext) {
+                return;
+            }
+            // 创建 context对象
+            var ctx = canvas.getContext("2d");
+            // 新建一条路径
+            ctx.beginPath();
+            // 移动画笔到指定坐标
+            ctx.moveTo(50, 50);
+            // 绘制一条从当前位置到指定坐标(200, 50)的直线
+            ctx.lineTo(200, 100);
+            // 闭合路径.会拉一条从当前点(200, 50)到 path 起始点(50, 50)的直线
+            // 如果当前点与起始点重合，则什么都不做
+            ctx.closePath();
+            // 绘制路径
+            ctx.stroke();
+        }
+        draw();
+    </script>
+    <hr />
+
+    <h3>绘制三角形</h3>
+    <canvas id="canvas_triangle" width="300px" height="300px" style="border: 1px solid purple">
+    </canvas>
+    <script type="text/javascript">
+        function draw() {
+            // 获取 canvas 元素
+            var canvas = document.getElementById('canvas_triangle');
+            if (!canvas.getContext) {
+                return;
+            }
+            // 创建 context对象
+            var ctx = canvas.getContext("2d");
+            // 新建一条路径
+            ctx.beginPath();
+            // 移动画笔到指定坐标
+            ctx.moveTo(10, 10);
+            // 绘制一条从当前位置到指定坐标(200, 50)的直线
+            ctx.lineTo(290, 10);
+            ctx.lineTo(290, 280);
+            // 闭合路径.会拉一条从当前点(200, 50)到 path 起始点(50, 50)的直线
+            // 如果当前点与起始点重合，则什么都不做
+            ctx.closePath();
+            // 绘制路径, stroke() 方法不会自动闭合路径, 所以需要手动调用 closePath() 方法
+            ctx.stroke();
+
+            // 绘制另一个填充的三角形
+            ctx.beginPath();
+            ctx.moveTo(290, 290);
+            ctx.lineTo(10, 290);
+            ctx.lineTo(10, 20);
+            // 绘制路径, fill() 方法会自动调用 closePath() 方法去闭合路径
+            ctx.fillStyle = "rgb(138, 43, 226)";
+            ctx.fill();
+        }
+        draw();
+    </script>
+    <hr />
+
+    <h3>绘制圆弧</h3>
+    <canvas id="canvas_arc1" width="300px" height="300px" style="border: 1px solid purple;"></canvas>
+    <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById('canvas_arc1');
+            if (!canvas.getContext) return;
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            // 圆心为 (100, 100), 半径为 50, 从 0 弧度(即 x 轴正方向)开始, PI / 2 弧度(90°)结束, 顺时针绘制圆弧
+            // 即画了一个角度为 90° 的圆弧
+            ctx.arc(100, 100, 50, 0, Math.PI / 2, false);
+            ctx.stroke();
+
+            // 逆时针绘制另一个圆弧
+            ctx.beginPath();
+            ctx.arc(200, 200, 50, 0, Math.PI / 2, true);
+            ctx.stroke();
+        }
+        draw();
+    </script>
+    <hr />
+
+    <h3>绘制圆弧</h3>
+    <canvas id="canvas_arc2" width="300px" height="300px" style="border:1px solid purple;"></canvas>
+    <script type="text/javascript">
+        function drawArc() {
+            // 获取画布元素
+            var canvas = document.getElementById('canvas_arc2');
+            if (!canvas.getContext) {
+                return;
+            }
+            // 创建 context 对象
+            var ctx = canvas.getContext("2d");
+
+            // 开始绘制路径
+            ctx.beginPath();
+            // 从 x 轴正半部分开始, 顺时针绘制一条角度为 90° 的圆弧
+            ctx.arc(50, 50, 50, 0, Math.PI / 2, false);
+            // 不填充该圆弧
+            ctx.stroke();
+
+            // 开始绘制另一条路径
+            ctx.beginPath();
+            // 从 x 轴正半部分开始, 逆时针绘制一条角度为 180° 的圆弧
+            ctx.arc(150, 100, 50, 0, -Math.PI / 2, true);
+            // 闭合路径, 会自动连接起点和重点
+            ctx.closePath();
+            // 不填充
+            ctx.stroke();
+
+            // 绘制另一条路径
+            ctx.beginPath();
+            // 从 y 轴负半部分开始, 到 y 轴正半部分结束, 顺时针绘制一条角度为 180° 的圆弧 
+            ctx.arc(50, 200, 50, -Math.PI / 2, Math.PI / 2, false);
+            // 默认自动闭合并黑色填充
+            ctx.fill();
+
+            // 绘制另一条路径
+            ctx.beginPath();
+            // 从 x 轴正半部分开始, 到 x 轴负半轴结束, 顺时针绘制一条角度为 180° 的圆弧
+            ctx.arc(200, 200, 50, 0, Math.PI, false);
+            // 默认自动闭合并黑色填充
+            ctx.fill();
+        }
+        drawArc();
+    </script>
+    <hr />
+
+    <h3>绘制圆形</h3>
+    <canvas id="canvas_circle" width="460px" height="250px" style="border:1px solid purple;"></canvas>
+    <script type="text/javascript">
+        function drawCircle() {
+            // 获取画布元素
+            var canvas = document.getElementById('canvas_circle');
+            if (!canvas.getContext) {
+                return;
+            }
+            // 创建 context 对象
+            var ctx = canvas.getContext("2d");
+
+            // 绘制蓝色环
+            ctx.beginPath();
+            ctx.lineWidth = "10";
+            ctx.arc(100, 100, 50, 0, Math.PI * 2, false);
+            ctx.strokeStyle = "blue";
+            ctx.stroke();
+
+            // 绘制黑色环
+            ctx.beginPath();
+            ctx.lineWidth = "10";
+            ctx.arc(230, 100, 50, 0, Math.PI * 2, false);
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            // 绘制红色环
+            ctx.beginPath();
+            ctx.lineWidth = "10";
+            ctx.arc(360, 100, 50, 0, Math.PI * 2, false);
+            ctx.strokeStyle = "red";
+            ctx.stroke();
+
+            // 绘制黄色环
+            ctx.beginPath();
+            ctx.lineWidth = "10";
+            ctx.arc(165, 150, 50, 0, Math.PI * 2, false);
+            ctx.strokeStyle = "yellow";
+            ctx.stroke();
+
+            // 绘制绿色环
+            ctx.beginPath();
+            ctx.lineWidth = "10";
+            ctx.arc(295, 150, 50, 0, Math.PI * 2, false);
+            ctx.strokeStyle = "green";
+            ctx.stroke();
+        }
+        drawCircle();
+    </script>
+    <hr />
+
+    <h3>绘制文本</h3>
+    <canvas id="canvas_text" width="300px" height="300px" style="border:1px solid purple;"></canvas>
+    <script type="text/javascript">
+        function drawText() {
+            // 获取画布元素
+            var canvas = document.getElementById('canvas_text');
+            if (!canvas.getContext) {
+                return;
+            }
+            // 创建 context 对象
+            var ctx = canvas.getContext("2d");
+            // 设置字体和大小
+            ctx.font = "100px sans-serif"
+            ctx.strokeText("CSDN", 10, 100);
+
+            //设置线性渐变色
+            var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+            gradient.addColorStop("0", "magenta")
+            gradient.addColorStop("0.5", "blue")
+            gradient.addColorStop("1.0", "red")
+            ctx.fillStyle = gradient;
+            ctx.fillText("CSDN", 10, 230)
+        }
+        drawText();
+    </script>
+    <hr />
+
+    <h3>设置颜色</h3>
+    <canvas id="canvas_color" width="320px" height="640px" style="border:1px solid purple;"></canvas>
+    <script type="text/javascript">
+        function setColor() {
+            // 获取画布元素
+            var canvas = document.getElementById('canvas_color');
+            if (!canvas.getContext) {
+                return;
+            }
+            // 创建 context 对象
+            var ctx = canvas.getContext("2d");
+            for (var i = 0; i < 6; i++) {
+                for (var j = 0; j < 6; j++) {
+                    ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' + Math.floor(255 - 42.5 * j) + ',0)';
+                    ctx.fillRect(j * 50 + 10, i * 50 + 10, 50, 50);
+                }
+            }
+
+            for (var i = 0; i < 6; i++) {
+                for (var j = 0; j < 6; j++) {
+                    ctx.strokeStyle = `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+                    ctx.strokeRect(j * 50 + 10, i * 50 + 330, 50, 50);
+                }
+            }
+        }
+        setColor();
+        // 获取随机数, 用来设置颜色
+        function randomInt(from, to) {
+            return parseInt(Math.random() * (to - from + 1) + from);
+        }
+    </script>
+
+</body>
+
+</html>
