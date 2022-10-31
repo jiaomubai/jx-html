@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML SVG 椭圆示例</title>
+</head>
+
+<body>
+
+    <!-- 
+        ellipse 元素的 cx 属性定义椭圆中心的 x 轴坐标
+        cy 属性定义椭圆中心的 y 轴坐标
+        rx 属性定义椭圆的水平半径, 即 x 轴上的半径
+        ry 属性定义椭圆的垂直半径, 即 y 轴上的半径
+        style 属性用来定义 css 相关样式
+        css 的 fill 属性定义椭圆的填充颜色
+        css 的 stroke 属性定义椭圆边框的颜色
+        css 的 stroke-width 属性定义椭圆边框的线条宽度
+     -->
+    <h3>svg 椭圆</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <ellipse cx="110" cy="60" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2" />
+    </svg>
+    <hr />
+
+    <svg width="500" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <ellipse cx="240" cy="150" rx="200" ry="40" style="fill:purple" />
+        <ellipse cx="240" cy="100" rx="200" ry="40" style="fill:lime" />
+        <ellipse cx="240" cy="50" rx="200" ry="40" style="fill:yellow" />
+    </svg>
+    <hr />
+
+    <svg width="500" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <ellipse cx="240" cy="150" rx="200" ry="100" style="fill:purple" />
+        <ellipse cx="240" cy="150" rx="160" ry="68" style="fill:white" />
+    </svg>
+
+</body>
+
+</html>

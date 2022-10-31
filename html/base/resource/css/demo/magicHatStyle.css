@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#app>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 设置下边框, 充当帽子帽檐的连接处 */
+.hat {
+    height: 150px;
+    width: 300px;
+    border-radius: 150px 150px 0 0;
+    background: #08ef5d;
+    border-bottom: 20px solid #0bec2d;
+}
+
+/* 帽檐 */
+.brim {
+    height: 50px;
+    width: 400px;
+    border-radius: 400px 400px 0 0;
+    background: #37ff00;
+}

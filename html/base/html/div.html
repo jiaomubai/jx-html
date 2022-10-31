@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 区块元素示例</title>
+</head>
+<body>
+    <p style="font-size: 20px;">div 实现文档布局:</p>
+    <!-- 最大的 div 区块 -->
+    <div id="container" style="width:800px">
+        <!-- 头部 div 区块, 用来设置文档标题 -->
+        <div id="header" style="background-color:#FFA500;">
+            <h1 style="margin-bottom:0; text-align: center;">标题</h1>
+        </div>
+
+        <!-- 左边菜单部分 div 区块 -->
+        <div id="menu" style="background-color:#FFD700;height:200px;width:300px;float:left; font-size: 15px; text-align: center;">
+            <p>菜单</p>
+            <p>HTML</p>
+            <p>HTML div</p>
+            <p>HTML span</p>
+            <p>HTML 区块</p>
+        </div>
+        
+        <!-- 右边内容部分 div 区块 -->
+        <div id="content" style="background-color:#EEEEEE;height:200px;width:500px;float:left; font-size: 15px; color: blueviolet;">
+            内容部分, xxxxxxxxxxxx
+        </div>
+        
+        <!-- 下边页脚部分 div 区块 -->
+        <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+            页脚
+        </div>
+
+    </div>
+    
+    <hr />
+    <p style="font-size: 20px;">table 实现文档布局:</p>
+    <table width="800" border="0">
+        <tr>
+            <td colspan="2" style="background-color:#FFA500; text-align: center;">
+                <h1>标题</h1>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="background-color:#FFD700;height:200px; width:300px; font-size: 15px; text-align: center; vertical-align:top;">
+                <p>菜单</p>
+                <p>HTML</p>
+                <p>HTML div</p>
+                <p>HTML span</p>
+                <p>HTML 区块</p>
+            </td>
+            <td style="background-color:#EEEEEE; height:200px; width:500px; font-size: 15px; color: blueviolet; vertical-align:top;">
+                内容部分, xxxxxxxxxxxx
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="background-color:#FFA500; text-align:center;">
+                页脚
+            </td>
+        </tr>
+     </table>
+    
+</body>
+</html>
